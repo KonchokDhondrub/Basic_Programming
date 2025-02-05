@@ -25,8 +25,11 @@ public class HW_20250204 {
         System.out.println("----- Is Names Matches ------");
         Person[] peopleCopy = Arrays.copyOf(people, people.length);
         PersonArrayHandler handlerCopy = new PersonArrayHandler(peopleCopy);
-
         isPersonsExists(handler, handlerCopy);
+
+        System.out.println("----- Collecting All Arrays ------");
+        PersonArrayHandler handlerAll = new PersonArrayHandler(retainAll(handler, handlerCopy));
+        System.out.println(handlerAll);
     }
 
     public static boolean isPersonsExists(PersonArrayHandler handler, PersonArrayHandler handlerCopy) {
@@ -42,5 +45,17 @@ public class HW_20250204 {
             }
         }
     return result;
+    }
+
+    public static Person[] retainAll(PersonArrayHandler handler, PersonArrayHandler handlerCopy){
+        int newArraySize = handler.getArray().length+handlerCopy.getArray().length;
+        Person[] peopleAll = new Person[newArraySize];
+        for (int i = 0; i < handler.getArray().length; i++) {
+            peopleAll[i] = handler.get(i);
+        }
+        for (int i = handler.getArray().length; i < newArraySize; i++) {
+            peopleAll[i] = handlerCopy.get(i-handlerCopy.getArray().length);
+        }
+        return peopleAll;
     }
 }
