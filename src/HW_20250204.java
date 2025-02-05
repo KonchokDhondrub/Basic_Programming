@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class HW_20250204 {
     public static void main(String[] args) {
         Person[] people = {
@@ -19,5 +21,26 @@ public class HW_20250204 {
         System.out.println("Самый старший человек: " + handler.get(handler.indexOfMaxAgePerson()));
         System.out.println("Самый старший, поиск от индекса: " + handler.get(handler.indexOfMaxAgePerson(3)));
         System.out.println("Существует ли: " + handler.isPersonExists("john"));
+
+        System.out.println("----- Is Names Matches ------");
+        Person[] peopleCopy = Arrays.copyOf(people, people.length);
+        PersonArrayHandler handlerCopy = new PersonArrayHandler(peopleCopy);
+
+        isPersonsExists(handler, handlerCopy);
+    }
+
+    public static boolean isPersonsExists(PersonArrayHandler handler, PersonArrayHandler handlerCopy) {
+        boolean result = false;
+        for (int i = 0; i < handler.getArray().length; i++) {
+            String resultStr = handlerCopy.get(i).getName() + " == " + handler.get(i).getName() + " = ";
+            String search = handler.get(i).getName();
+            if (handlerCopy.get(i).getName().contains(search)) {
+                System.out.println(resultStr + true);
+                result = true;
+            } else {
+                System.out.println(resultStr + false);
+            }
+        }
+    return result;
     }
 }
