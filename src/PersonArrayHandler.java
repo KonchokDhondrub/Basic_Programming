@@ -16,13 +16,7 @@ public class PersonArrayHandler{
     }
 
     public int indexOfMaxAgePerson() {
-        int maxIndex = 0;
-        for (int i = 1; i < array.length; i++) {
-            if (array[i].getAge() > array[maxIndex].getAge()) {
-                maxIndex = i;
-            }
-        }
-        return maxIndex;
+        return indexOfMaxAgePerson(0);
     }
 
     public int indexOfMaxAgePerson(int index) {
