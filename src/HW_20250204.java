@@ -27,7 +27,7 @@ public class HW_20250204 {
         PersonArrayHandler handlerCopy = new PersonArrayHandler(peopleCopy);
         isPersonsExists(handler, handlerCopy);
 
-        System.out.println("----- Collecting All Arrays ------");
+        System.out.println("----- Merging All Arrays ------");
         PersonArrayHandler handlerAll = new PersonArrayHandler(retainAll(handler, handlerCopy));
         System.out.println(handlerAll);
     }
