@@ -28,6 +28,11 @@ public class HW_20250204 {
         isPersonsExists(handler, handlerCopy);
 
         System.out.println("----- Merging All Arrays ------");
+//        Person[] peopleAll = new Person[people.length + peopleCopy.length];
+//        System.arraycopy(people, 0, peopleAll, 0, people.length);
+//        System.arraycopy(peopleCopy, 0, peopleAll, people.length, peopleCopy.length);
+//        PersonArrayHandler handlerAll = new PersonArrayHandler(peopleAll);
+
         PersonArrayHandler handlerAll = new PersonArrayHandler(retainAll(handler, handlerCopy));
         System.out.println(handlerAll);
     }
