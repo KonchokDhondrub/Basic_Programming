@@ -1,6 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class HW_20250204 {
     public static void main(String[] args) {
         Person[] people = {
