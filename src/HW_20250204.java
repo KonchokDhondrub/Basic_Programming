@@ -19,21 +19,8 @@ public class HW_20250204 {
         PersonArrayHandler handler = new PersonArrayHandler(people);
         System.out.println(handler);
 
-//        listOfPeoplePrint(handler);
         System.out.println("Самый старший человек: " + handler.get(handler.indexOfMaxAgePerson()));
         System.out.println("Самый старший, поиск от индекса: " + handler.get(handler.indexOfMaxAgePerson(3)));
         System.out.println("Существует ли: " + handler.isPersonExists("john"));
-
     }
-
-
-
-
-
-
-//    public static void listOfPeoplePrint(PersonArrayHandler handler) {
-//        for (PersonArrayHandler person : handler) {
-//            System.out.println(person);
-//        }
-//    }
 }
