@@ -20,7 +20,9 @@ public class HW_20250204 {
 
         System.out.println("Самый старший человек: " + handler.get(handler.indexOfMaxAgePerson()));
         System.out.println("Самый старший, поиск от индекса: " + handler.get(handler.indexOfMaxAgePerson(3)));
-        System.out.println("Существует ли: " + handler.isPersonExists("john"));
+        String searchName = "kiril";
+        int searchAge = 86;
+        System.out.println("Существует ли " + searchName + ", " + searchAge + ": " + handler.isPersonExists(searchName, searchAge));
 
         System.out.println("----- Is Names Matches ------");
         Person[] peopleCopy = Arrays.copyOf(people, people.length);
