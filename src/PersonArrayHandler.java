@@ -34,9 +34,9 @@ public class PersonArrayHandler{
         return maxIndex>=array.length?-1:maxIndex;
     }
 
-    public boolean isPersonExists(String searchName) {
+    public boolean isPersonExists(String searchName, int searchAge) {
         for (Person array : array) {
-            if (array.getName().contains(searchName))
+            if (array.getName().contains(searchName) && array.getAge() == searchAge)
                 return true;
         }
         return false;
